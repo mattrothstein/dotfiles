@@ -3,6 +3,7 @@
 ################################
 export ZSH=/Users/matt/.oh-my-zsh
 ZSH_THEME="powerlevel9k/powerlevel9k"
+DEFAULT_USER="matt"
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="↱"
