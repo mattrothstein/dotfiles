@@ -16,3 +16,4 @@ alias home="cd ~/"
 alias app="cd ~/Projects/line5"
 alias forms="cd ~/Projects/line5_forms"
 alias ks="lsof -wni tcp:3000"
+source ~/.profile
