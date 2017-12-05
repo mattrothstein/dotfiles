@@ -1,5 +1,6 @@
-Pry.config.prompt_name = "💎"
-Pry.config.prompt = proc { |obj, nest_level, _| "#{Pry.config.prompt_name}  #{obj}:#{nest_level} ---> " }
+Pry.config.prompt_name = "💎  "
+Pry.config.prompt = [ proc { "#{Pry.config.prompt_name}  --> " }, proc { |obj, nest_level| "#{nest_level}: #{Pry.config.prompt_name}  --> " }]
+
 def fl(loan_id)
   Loan.find(loan_id)
 end
