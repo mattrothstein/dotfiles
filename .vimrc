@@ -25,6 +25,7 @@ autocmd BufWritePre * %s/\s\+$//e
 
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:airline_powerline_fonts = 1
+let g:ackprg = 'ag --vimgrep'
 
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
