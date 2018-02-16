@@ -16,4 +16,6 @@ alias home="cd ~/"
 alias app="cd ~/Projects/line5"
 alias forms="cd ~/Projects/line5_forms"
 alias ks="lsof -wni tcp:3000"
+alias fix_db="rake db:drop RAILS_ENV=test && rake db:create RAILS_ENV=test && rake db:migrate RAILS_ENV=test"
+alias clean_schema="git checkout db/"
 source ~/.profile
