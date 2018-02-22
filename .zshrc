@@ -49,7 +49,8 @@ DISABLE_AUTO_UPDATE="false"
 export UPDATE_ZSH_DAYS=13
 DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="false"
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
+unsetopt correct_all
 COMPLETION_WAITING_DOTS="true"
 plugins=(colorize colored-man-pages emoji git rails ruby history zsh-syntax-highlighting docker docker-compose)
 export LC_ALL=en_US.UTF-8
