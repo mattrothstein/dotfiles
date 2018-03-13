@@ -16,7 +16,3 @@ end
 def time(&block)
   puts Benchmark.measure(&block)
 end
-
-def do_sql(sql_string)
-  ActiveRecord::Base.connection.execute(sql_string)
-end
