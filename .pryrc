@@ -16,3 +16,7 @@ end
 def time(&block)
   puts Benchmark.measure(&block)
 end
+
+def dealer_with_the_most_loans
+  Loan.select(:dealer_id).group(:dealer_id).order("count(dealer_id) desc").first.dealer
+end
