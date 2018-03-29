@@ -99,6 +99,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'rking/ag.vim'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
