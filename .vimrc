@@ -4,6 +4,10 @@ filetype indent on
 
 :map! jk <ESC>
 :map! <F5> :ls<cr>
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 cabbrev nt NERDTree
 cabbrev ct ConqueTerm bash

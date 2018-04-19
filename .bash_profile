@@ -19,4 +19,5 @@ alias ks="lsof -wni tcp:3000"
 alias fix_test_db="bin/rails db:environment:set RAILS_ENV=test && rake db:drop RAILS_ENV=test && rake db:create RAILS_ENV=test && rake db:migrate RAILS_ENV=test"
 alias clean_schema="git checkout db/"
 alias spc="screen -d -m emacs"
+alias vin="echo 1N4AL3APXEC320737 | pbcopy"
 source ~/.profile
