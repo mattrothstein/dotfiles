@@ -17,6 +17,6 @@ alias fix_test_db="bin/rails db:environment:set RAILS_ENV=test && rake db:drop R
 alias clean_schema="git checkout db/"
 alias spc="screen -d -m emacs"
 alias vin="echo 1N4AL3APXEC320737 | pbcopy"
-alias rpp="rake parallel:prepare"
+alias rpp="DISABLE_SPRING=true rake parallel:prepare"
 alias test="DISABLE_SPRING=true rake"
 source ~/.profile
