@@ -23,7 +23,7 @@ set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
 syntax enable
-colorscheme monokai
+colorscheme dracula
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
 
@@ -104,6 +104,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rking/ag.vim'
+Plugin 'dracula/vim'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
