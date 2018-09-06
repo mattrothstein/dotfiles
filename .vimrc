@@ -80,6 +80,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.fzf
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
@@ -91,6 +92,8 @@ Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-jdaddy'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'thoughtbot/vim-rspec'
@@ -98,7 +101,9 @@ Plugin 'wkentaro/conque.vim'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'junegunn/fzf.vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-system-copy'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
