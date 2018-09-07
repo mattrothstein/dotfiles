@@ -14,7 +14,6 @@ cabbrev ct ConqueTerm bash
 cabbrev cts ConqueTermSplit bash
 cabbrev ctv ConqueTermVSplit bash
 cabbrev ctr ConqueTerm rails c
-cabbrev rs split <bar> q <bar> vs <bar> q
 
 set ruler
 set number
@@ -43,8 +42,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd filetype crontab setlocal nobackup nowritebackup
 
