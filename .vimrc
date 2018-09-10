@@ -36,6 +36,8 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
+map ff :FZF<CR>
+
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
@@ -92,6 +94,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-jdaddy'
+Plugin 'tpope/vim-dispatch'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'thoughtbot/vim-rspec'
