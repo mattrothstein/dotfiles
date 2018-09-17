@@ -8,6 +8,7 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+:command! -bar -bang Q quit<bang>
 
 cabbrev nt NERDTree
 cabbrev ct ConqueTerm bash
@@ -37,6 +38,8 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 map ff :FZF<CR>
+map gb :Gblame<CR>
+map nt :nt<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
