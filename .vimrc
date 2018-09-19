@@ -2,8 +2,6 @@ syntax on
 filetype plugin on
 filetype indent on
 
-:map! jk <ESC>
-:map! <F5> :ls<cr>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -37,9 +35,19 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-map ff :FZF<CR>
-map gb :Gblame<CR>
-map nt :nt<CR>
+map <Space>ff :FZF<CR>
+map <Space>gb :Gblame<CR>
+map <Space>nt :NERDTreeToggle<CR>
+map <Space>nf :NERDTreeFind<CR>
+map <Space>bb :ls<CR>
+map <Space>as :AS<CR>
+map <Space>a  :A<CR>
+map <Space>rs :RS<CR>
+map <Space>r  :R<CR>
+map <Space>vs :vsplit<CR>
+map <Space>hs :split<CR>
+map <Space>hs :split<CR>
+map <Space><Tab> :b#<cr>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -47,14 +55,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 autocmd StdinReadPre * let s:std_in=1
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd QuickFixCmdPost *grep* cwindow
 autocmd filetype crontab setlocal nobackup nowritebackup
-
-function SwitchBuffer()
-  b#
-endfunction
-nmap <Tab> :call SwitchBuffer()<CR>
 
 function! NERDTreeHighlightFile(extension, fg, bg, guifg, guibg)
  exec 'autocmd filetype nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
