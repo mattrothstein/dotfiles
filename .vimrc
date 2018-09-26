@@ -29,7 +29,6 @@ let g:rspec_command = "!bundle exec rspec {spec}"
 let g:airline_powerline_fonts = 1
 let g:ackprg = 'ag --vimgrep'
 
-" RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
@@ -48,11 +47,18 @@ map <Space>vs :vsplit<CR>
 map <Space>hs :split<CR>
 map <Space>hs :split<CR>
 map <Space><Tab> :b#<cr>
+map <Space>frt :Frt<CR>
 
-" Start interactive EasyAlign in visual mode (e.g. vipga)
+"FIX STICKY SHIFT"
+map :Q :q
+map :Wq :wq
+map :W :w
+map :WQ :wq
+
 xmap ga <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+:command Frt :normal gg 0 O# frozen_string_literal: true<CR><ESC>x
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd QuickFixCmdPost *grep* cwindow
