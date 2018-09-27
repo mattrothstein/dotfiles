@@ -29,11 +29,11 @@ let g:rspec_command = "!bundle exec rspec {spec}"
 let g:airline_powerline_fonts = 1
 let g:ackprg = 'ag --vimgrep'
 
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
+map <Space>ve :e ~/.vimrc<CR>
+map <Space>so :so ~/.vimrc<CR>
+map <Space>sf :call RunCurrentSpecFile()<CR>
+map <Space>ns :call RunNearestSpec()<CR>
+map <Space>as :call RunAllSpecs()<CR>
 map <Space>ff :FZF<CR>
 map <Space>gb :Gblame<CR>
 map <Space>nt :NERDTreeToggle<CR>
@@ -45,20 +45,17 @@ map <Space>rs :RS<CR>
 map <Space>r  :R<CR>
 map <Space>vs :vsplit<CR>
 map <Space>hs :split<CR>
-map <Space>hs :split<CR>
-map <Space><Tab> :b#<cr>
+map <Space><Tab> :b#<CR>
 map <Space>frt :Frt<CR>
 
 "FIX STICKY SHIFT"
 map :Q :q
-map :Wq :wq
 map :W :w
-map :WQ :wq
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
-:command Frt :normal gg 0 O# frozen_string_literal: true<CR><ESC>x
+:command Frt :normal gg O# frozen_string_literal: true<CR><ESC>x
 
 autocmd StdinReadPre * let s:std_in=1
 autocmd QuickFixCmdPost *grep* cwindow
