@@ -33,7 +33,6 @@ map <Space>ve :e ~/.vimrc<CR>
 map <Space>so :so ~/.vimrc<CR>
 map <Space>sf :call RunCurrentSpecFile()<CR>
 map <Space>ns :call RunNearestSpec()<CR>
-map <Space>as :call RunAllSpecs()<CR>
 map <Space>ff :FZF<CR>
 map <Space>gb :Gblame<CR>
 map <Space>nt :NERDTreeToggle<CR>
@@ -47,6 +46,20 @@ map <Space>vs :vsplit<CR>
 map <Space>hs :split<CR>
 map <Space><Tab> :b#<CR>
 map <Space>frt :Frt<CR>
+map <Space>avs :AVS<CR>
+
+if exists('g:loaded_dash')
+  finish
+endif
+let g:loaded_dash = 1
+
+function! s:Dash(search)
+  exec 'silent !open "dash://' . join(split(a:search), ':') . '"'
+  redraw!
+endfunction
+
+command! -bar -nargs=+ Dash call s:Dash(<q-args>)
+nnoremap <Space>dd :Dash <C-R>=&filetype<CR> <cword><CR>
 
 "FIX STICKY SHIFT"
 map :Q :q
@@ -55,6 +68,7 @@ map :W :w
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
+:command AVS :vsplit<CR> :A<CR>
 :command Frt :normal gg O# frozen_string_literal: true<CR><ESC>x
 
 autocmd StdinReadPre * let s:std_in=1
@@ -119,6 +133,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rking/ag.vim'
 Plugin 'dracula/vim'
+Plugin 'rizzatti/dash.vim'
 call vundle#end()            " required
 
 filetype plugin indent on    " required
