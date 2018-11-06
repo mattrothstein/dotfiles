@@ -133,6 +133,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'junegunn/vim-easy-align'
 Plugin 'rking/ag.vim'
 Plugin 'dracula/vim'
+Plugin 'jgdavey/vim-blockle'
 Plugin 'rizzatti/dash.vim'
 call vundle#end()            " required
 
