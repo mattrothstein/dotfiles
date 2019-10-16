@@ -20,19 +20,31 @@ set splitright splitbelow
 set expandtab shiftwidth=2 tabstop=2 softtabstop=2
 set backspace=indent,eol,start
 set t_Co=256  " vim-monokai now only support 256 colours in terminal.
+set nofoldenable
+
 syntax enable
 colorscheme dracula
+hi StatusLine ctermbg=1
+hi Comment guifg=#1abc9c
+
 autocmd BufWritePre * %s/\s\+$//e
 :set ignorecase
+
+:set mouse=a
 
 let g:rspec_command = "!bundle exec rspec {spec}"
 let g:airline_powerline_fonts = 1
 let g:ackprg = 'ag --vimgrep'
+let g:NERDTreeWinSize=60
+let NERDTreeShowHidden=1
+
+vnoremap <space>p "_dP
 
 map <Space>ve :e ~/.vimrc<CR>
 map <Space>so :so ~/.vimrc<CR>
 map <Space>sf :call RunCurrentSpecFile()<CR>
 map <Space>ns :call RunNearestSpec()<CR>
+map <Space>rb :Dispatch rubocop %<CR>
 map <Space>ff :FZF<CR>
 map <Space>gb :Gblame<CR>
 map <Space>nt :NERDTreeToggle<CR>
@@ -102,7 +114,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
-set rtp+=~/.fzf
+set rtp+=/usr/local/opt/fzf
 
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
